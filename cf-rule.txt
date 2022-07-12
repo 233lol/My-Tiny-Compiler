@@ -1,0 +1,4 @@
+num:(d|p|n)d*
+id:l(d|l)*
+key:if else while endif endw read write repeat until then
+symbol:; ( ) = == < + - * /

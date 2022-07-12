@@ -1,0 +1,26 @@
+IN x
+IN y
+ADD 3 4 temp0
+EQU x temp0
+OUT x
+IN x
+CMP< x 3 temp1
+IF_F temp1 goto L0
+EQU x 5
+EQU y 2
+goto L1
+Label L0
+EQU x 3
+Label L1
+Label L2
+CMP< x 10 temp2
+IF_F temp2 goto L3
+ADD x 1 x
+ADD y 2 y
+goto L2
+Label L3
+Label L4
+ADD x 2 x
+CMP< x 12 temp3
+IF_F temp3 goto L4
+OUT x

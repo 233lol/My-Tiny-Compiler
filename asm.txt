@@ -1,0 +1,36 @@
+IN,x
+IN,y
+MOV R0,3
+ADD R0,4
+MOV temp0 R0
+MOV R0,temp0
+MOV x,R0
+OUT,x
+IN,x
+CMP x,3
+JE goto
+goto:
+MOV R0,5
+MOV x,R0
+MOV R0,2
+MOV y,R0
+JMP,L1
+MOV R0,3
+MOV x,R0
+CMP x,10
+JE goto
+goto:
+MOV R0,x
+ADD R0,1
+MOV x R0
+MOV R0,y
+ADD R0,2
+MOV y R0
+JMP,L2
+MOV R0,x
+ADD R0,2
+MOV x R0
+CMP x,12
+JE goto
+goto:
+OUT,x

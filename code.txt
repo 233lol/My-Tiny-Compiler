@@ -1,0 +1,21 @@
+read x ; #读取x值
+read y ;
+x = 12 * y + 2 - ( 2 + 4 ) / 2 ; 
+x = 3 + 4 ;
+write x ;
+x = 5 * 2 ;
+read x ;
+if ( x < 3 ) then
+    x = 5 ;
+    y = 2 ;
+else 
+    x = 3 ;
+endif ;
+while ( x < 10 )
+    x = x + 1 ;
+    y = y + 2 ;
+endw ;
+repeat
+    x = x + 2 ;
+until ( x < 12 ) ;
+write x ;

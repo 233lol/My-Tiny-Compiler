@@ -1,0 +1,32 @@
+program -> stmt-sequence # ed
+stmt-sequence -> stmt-sequence ; statement # seq
+stmt-sequence -> statement # eq
+statement -> if-stmt # eq
+statement -> while-stmt # eq
+statement -> assign-stmt # eq
+statement -> read-stmt  # eq
+statement -> write-stmt # eq
+statement -> repeat-stmt # eq
+statement -> &
+if-stmt -> if ( exp ) then stmt-sequence endif # if
+if-stmt -> if ( exp ) then stmt-sequence else stmt-sequence endif # if-e
+while-stmt -> while ( exp ) stmt-sequence endw # while
+repeat-stmt -> repeat stmt-sequence until ( exp ) # repeat
+assign-stmt -> id = exp # as
+read-stmt -> read id # rd
+write-stmt -> write id # wr
+exp -> simple-exp comparison-op simple-exp # cmp
+exp -> simple-exp # eq
+comparison-op -> < # cmp<
+comparison-op -> == # cmp=
+simple-exp -> simple-exp addop term # add2
+simple-exp -> term # eq
+addop -> + # add
+addop -> - # sub
+term -> term mulop factor # mul2
+term -> factor # eq
+mulop -> * # mul
+mulop -> / # div
+factor -> ( exp ) # eqexp
+factor -> num # eqnum
+factor -> id # eqid
